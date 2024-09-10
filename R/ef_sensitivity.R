@@ -16,7 +16,7 @@
 ef_sensitivity <- function(product) {
     #sourceCpp("src/mc_sensitivity_op.cpp")
     Sensitivity <- ef_sensitivity_op(products = product)
-    Sensitivity <- forceSymmetric(Sensitivity, uplo = FALSE)
+    Sensitivity <- forceSymmetric(Sensitivity)
     return(Sensitivity)
 }
 

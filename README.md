@@ -110,8 +110,8 @@ See [LICENSE](./LICENSE)
 [GNU General Public License (GPL) v3.0]: http://www.gnu.org/licenses/gpl-3.0.html
 [`roxygen2`]: https://github.com/klutometis/roxygen
 [`devtools`]: https://github.com/hadley/devtools
-[mglm4twin_0.1.0.tar.gz]: https://github.com/wbonat/mglm4twin/raw/master/downloads/mglm4twin_0.1.0.tar.gz
-[mglm4twin_0.1.0.zip]: https://github.com/wbonat/mglm4twin/raw/master/downloads/mglm4twin_0.1.0.zip
-[mglm4twin-manual.pdf]: https://github.com/wbonat/mcglm/raw/master/downloads/mglm4twin-manual.pdf
+[mglm4twin_0.1.0.tar.gz]: http://www.leg.ufpr.br/~leg/mglm4twin/source/mglm4twin_0.1.0.tar.gz
+[mglm4twin_0.1.0.zip]: http://www.leg.ufpr.br/~leg/mglm4twin/source/mglm4twin_0.1.0.zip
+[mglm4twin-manual.pdf]: http://www.leg.ufpr.br/~leg/mglm4twin/source/mglm4twin-manual.pdf
 [Gitflow workflow]: http://nvie.com/posts/a-successful-git-branching-model/
-[Wagner Hugo Bonat]: http://www.leg.ufpr.br/doku.php/~wagner
+[Wagner Hugo Bonat]: http://www.leg.ufpr.br/~wagner

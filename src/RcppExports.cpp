@@ -6,6 +6,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // ef_sensitivity_op
 arma::sp_mat ef_sensitivity_op(List products);
 RcppExport SEXP _mglm4twin_ef_sensitivity_op(SEXP productsSEXP) {
