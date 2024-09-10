@@ -12,8 +12,6 @@ ef_core_pearson(product, inv_C, res)
 \item{inv_C}{A matrix.}
 
 \item{res}{A vector of weighted residuals.}
-
-\item{C}{A matrix.}
 }
 \value{
 A vector.

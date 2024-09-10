@@ -12,11 +12,11 @@ mt_derivative_V_sqrt_beta(D, D_V_sqrt_mu)
 \item{D_V_sqrt_mu}{A matrix.}
 }
 \value{
-A list of matrices, containg the derivatives of \eqn{V^{1/2}}
+A list of matrices, contain the derivatives of \eqn{V^0.5}
     with respect to the regression parameters.
 }
 \description{
-Compute the derivatives of \eqn{V^{1/2}} matrix with
+Compute the derivatives of \eqn{V^0.5} matrix with
     respect to the regression parameters beta.
 }
 \author{

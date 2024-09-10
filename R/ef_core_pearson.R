@@ -5,7 +5,6 @@
 #'
 #' @param product A matrix.
 #' @param inv_C A matrix.
-#' @param C A matrix.
 #' @param res A vector of weighted residuals.
 #' @return A vector.
 #' @keywords internal

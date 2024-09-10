@@ -1,8 +1,6 @@
 
 
-# mglm4twin 0.1.0
-
-[![Build Status](https://travis-ci.org/wbonat/mglm4twin.svg?branch=master)](https://travis-ci.org/wbonat/mglm4twin)
+# mglm4twin 0.2.0
 
 The `mglm4twin` package fits multivariate generalized linear models 
 for twin and family data. (Bonat and Hjelmborg, 2018).
@@ -12,9 +10,10 @@ for twin and family data. (Bonat and Hjelmborg, 2018).
 `mglm4twin` fits multivariate generalized linear models for twin and 
 family data. It allows use a different linear predictor for each 
 response variable of a multivariate response. 
-The response variable can be continous or dicrete, like counts and 
-binomial and also limited continuos or discrete/continuous inflated 
-responses. The most important and relevant feature is that many covariance structures can be used to model the relations among different traits.
+The response variable can be continuous or discrete, like counts and 
+binomial and also limited continuous or discrete/continuous inflated 
+responses. The most important and relevant feature is that many covariance 
+structures can be used to model the relations among different traits.
 
 ## Download and install
 
@@ -25,25 +24,25 @@ Use the `devtools` package (available from
 install automatically from this GitHub repository:
 
 
-```r
+``` r
 library(devtools)
-install_github("wbonat/mglm4twin")
+install_github("bonatwagner/mglm4twin")
 ```
 
-Alternatively, download the package tarball: [mglm4twin_0.1.0.tar.gz][]
+Alternatively, download the package tarball: [mglm4twin_0.2.0.tar.gz][]
 and run from a UNIX terminal (make sure you are on the container file
 directory):
 
 
 ```
-R CMD INSTALL -l /path/to/your/R/library mglm4twin_0.1.0.tar.gz
+R CMD INSTALL -l /path/to/your/R/library mglm4twin_0.2.0.tar.gz
 ```
 
 Or, inside an `R` session:
 
 
 ```
-install.packages("mglm4twin_0.1.0.tar.gz", repos = NULL,
+install.packages("mglm4twin_0.2.0.tar.gz", repos = NULL,
                  lib.loc = "/path/to/your/R/library",
                  dependencies = TRUE)
 ```
@@ -55,35 +54,16 @@ library.
 
 ### Windows
 
-Download Windows binary version: [mglm4twin_0.1.0.zip][] (**do not unzip
+Download Windows binary version: [mglm4twin_0.2.0.zip][] (**do not unzip
 it under Windows**), put the file in your working directory, and from
 inside `R`:
 
 
 ```
-install.packages("mglm4twin_0.1.0.zip", repos = NULL,
+install.packages("mglm4twin_0.2.0.zip", repos = NULL,
                  dependencies = TRUE)
 ```
 
-### Development version
-
-By default, if you use `devtools::install_github()`, or download any of the
-package tarball or Windows binary version, it will install the stable
-version of the package (from the `master` branch of this repository).
-
-If you want to install the development version, you can use
-
-```r
-library(devtools)
-install_github("wbonat/mglm4twin", ref = "devel")
-```
-
-Note that the development version can contain bugs and other unknown
-features, so use it at your own risk!
-
-## Authors
-
-- [Wagner Hugo Bonat](www.leg.ufpr.br/~wagner) (author and main developer)
 
 ## Documentation
 
@@ -110,8 +90,8 @@ See [LICENSE](./LICENSE)
 [GNU General Public License (GPL) v3.0]: http://www.gnu.org/licenses/gpl-3.0.html
 [`roxygen2`]: https://github.com/klutometis/roxygen
 [`devtools`]: https://github.com/hadley/devtools
-[mglm4twin_0.1.0.tar.gz]: http://www.leg.ufpr.br/~leg/mglm4twin/source/mglm4twin_0.1.0.tar.gz
-[mglm4twin_0.1.0.zip]: http://www.leg.ufpr.br/~leg/mglm4twin/source/mglm4twin_0.1.0.zip
-[mglm4twin-manual.pdf]: http://www.leg.ufpr.br/~leg/mglm4twin/source/mglm4twin-manual.pdf
+[mglm4twin_0.2.0.tar.gz]: http://www.leg.ufpr.br/~wagner/mglm4twin/source/mglm4twin_0.2.0.tar.gz
+[mglm4twin_0.2.0.zip]: http://www.leg.ufpr.br/~wagner/mglm4twin/source/mglm4twin_0.2.0.zip
+[mglm4twin-manual.pdf]: http://www.leg.ufpr.br/~wagner/mglm4twin/source/mglm4twin-manual.pdf
 [Gitflow workflow]: http://nvie.com/posts/a-successful-git-branching-model/
 [Wagner Hugo Bonat]: http://www.leg.ufpr.br/~wagner

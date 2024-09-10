@@ -18,8 +18,8 @@ ls("package:mglm4twin")
 packageVersion("mglm4twin")
 
 # How many objects in each class.
-table(sapply(ls("package:mglm4twin"),
-             function(x) class(eval(parse(text=x)))))
+#table(sapply(ls("package:mglm4twin"),
+#             function(x) class(eval(parse(text=x)))))
 
 #-----------------------------------------------------------------------
 # Check.
@@ -41,9 +41,10 @@ check(manual = TRUE, vignettes = TRUE, check_dir = "../",
 #-----------------------------------------------------------------------
 # Build the package (it will be one directory up).
 
-build(manual = TRUE, vignettes = TRUE)
+build(manual = TRUE, vignettes = FALSE)
 # build the binary version for windows (not used)
-# build_win()
+# devtools::build_win()
+
 
 #-----------------------------------------------------------------------
 # Package vignette (use only if necessary)

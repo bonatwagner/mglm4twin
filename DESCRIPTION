@@ -1,7 +1,7 @@
 Package: mglm4twin
 Type: Package
 Title: Multivariate Generalized linear models for twin data
-Version: 0.1.0
+Version: 0.2.0
 Date: 2018-06-05
 Author: Wagner Hugo Bonat [aut, cre],
   Jacob v. B. Hjelmborg [ctb]
@@ -11,7 +11,7 @@ Authors@R: c(person(c("Wagner","Hugo"), "Bonat", role = c("aut", "cre"),
 	     person(c("Jacob","v. B."), "Hjelmborg", role = "ctb"))
 Description: Fitting multivariate generalized linear models for twin and family data.
 Depends:
-    R (>= 3.2.1)
+    R (>= 4.4.0)
 Suggests:
     testthat,
     knitr,
@@ -24,9 +24,9 @@ Imports:
     Rcpp (>= 0.12.16)
 License: GPL-3 | file LICENSE
 LazyData: TRUE
-URL: https://github.com/wbonat/mglm4twin
-BugReports: https://github.com/wbonat/mglm4twin/issues
+URL: https://github.com/bonatwagner/mglm4twin
+BugReports: https://github.com/bonatwagner/mglm4twin/issues
 Encoding: UTF-8
 VignetteBuilder: knitr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.3.2
 LinkingTo: Rcpp, RcppArmadillo

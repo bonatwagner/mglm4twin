@@ -11,7 +11,6 @@
 #' @param D A matrix.
 #' @param correct Logical.
 #' @param compute_variability Logical.
-#' @param compute_sensitivity Logical.
 #' @return A list with three components: (i) a vector of quasi-score
 #'     values, (ii) the sensitivity and (iii) variability matrices
 #'     associated with the Pearson estimating function.
