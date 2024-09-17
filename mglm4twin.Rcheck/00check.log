@@ -1,0 +1,144 @@
+* using log directory ‘/home/wagner/GitHub/mglm4twin/mglm4twin.Rcheck’
+* using R version 4.4.1 (2024-06-14)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Ubuntu 13.2.0-23ubuntu4) 13.2.0
+    GNU Fortran (Ubuntu 13.2.0-23ubuntu4) 13.2.0
+* running under: Ubuntu 24.04 LTS
+* using session charset: UTF-8
+* using options ‘--ignore-vignettes --as-cran’
+* checking for file ‘mglm4twin/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘mglm4twin’ version ‘0.4.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘mglm4twin’ can be installed ... [19s/20s] OK
+* used C++ compiler: ‘g++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0’
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Namespace no campo Imports não importado de: ‘graphics’
+  All declared Imports should be used.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... WARNING
+Registration problems:
+  call to ‘"_mglm4twin_ef_sensitivity_op"’ with 2 parameters, expected 1:
+   .Call("_mglm4twin_ef_sensitivity_op", PACKAGE = "mglm4twin", 
+       products, W)
+  call to ‘"_mglm4twin_ef_variability_op"’ with 4 parameters, expected 3:
+   .Call("_mglm4twin_ef_variability_op", PACKAGE = "mglm4twin", 
+       sensitivity, WE, k4, W)
+See chapter ‘System and foreign language interfaces’ in the ‘Writing R
+Extensions’ manual.
+* checking R code for possible problems ... NOTE
+Found if() conditions comparing class() to string:
+File ‘mglm4twin/R/mt_main_function.R’: if (class(control_initial) != "list") ...
+File ‘mglm4twin/R/mt_main_function.R’: if (class(weights) != "list") ...
+File ‘mglm4twin/R/mt_main_function.R’: if (class(model_fit) != "try-error") ...
+File ‘mglm4twin/R/mt_pBIC.R’: if (class(object) == "mglm4twin") ...
+File ‘mglm4twin/R/mt_pBIC.R’: if (class(object) == "list") ...
+File ‘mglm4twin/R/mt_pKLIC.R’: if (class(object) == "mglm4twin") ...
+File ‘mglm4twin/R/mt_pKLIC.R’: if (class(object) == "list") ...
+File ‘mglm4twin/R/mt_plogLik.R’: if (class(object) == "mglm4twin") ...
+File ‘mglm4twin/R/mt_plogLik.R’: if (class(object) == "list") ...
+Use inherits() (or maybe is()) instead.
+* checking Rd files ... NOTE
+checkRd: (-1) mt_derivative_V_sqrt_beta.Rd:5: Lost braces; missing escapes or markup?
+     5 | \title{Derivatives of V^{1/2} with respect to beta.}
+       |                         ^
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... NOTE
+Documented arguments not in \usage in Rd file 'ef_core_pearson.Rd':
+  ‘C’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking line endings in C/C++/Fortran sources/headers ... OK
+* checking pragmas in C/C++ headers and code ... OK
+* checking compilation flags used ... NOTE
+Compilation used the following non-portable flag(s):
+  ‘-mno-omit-leaf-frame-pointer’
+* checking compiled code ... OK
+* checking files in ‘vignettes’ ... SKIPPED
+* checking examples ... ERROR
+Running examples in ‘mglm4twin-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: anthro
+> ### Title: Anthropometric measures (weight and height)
+> ### Aliases: anthro
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> require(mglm4twin)
+> data(anthro, package="mglm4twin")
+> anthro$age <- (anthro$age - mean(anthro$age))/sd(anthro$age)
+> anthro$weight <- (anthro$weight - mean(anthro$weight))/sd(anthro$weight)
+> anthro$height <- (anthro$height - mean(anthro$height))/sd(anthro$height)
+> form_Wt <- weight ~ age + Group*Twin_pair
+> form_Ht <- height ~ age + Group*Twin_pair
+> biv0 <- list("formE1" = ~ age, "formE2" = ~ age, "formE12" = ~ age,
++              "formA1" = ~ age, "formA2" = ~ age, "formA12" = ~ age,
++              "formC1" = ~ age, "formC2" = ~ age, "formC12" = ~ age)
+> Z_biv0 <- mt_twin(N_DZ = 327, N_MZ = 534, n_resp = 2, model = "ACE",
++                  formula = biv0, data = anthro)
+> control_initial <- list()
+> control_initial$regression <- list("R1" = c(0.13, 0.10, -0.20, -0.02, 0.037),
++                                    "R2" = c(0.23, 0.01, -0.27, -0.11, 0.11))
+> control_initial$power <- list(c(0), c(0))
+> control_initial$tau <- c(0.15, 0, 0.12, rep(0,15))
+> fit_0 <- mglm4twin(linear_pred = c(form_Wt, form_Ht), matrix_pred = Z_biv0,
++                    control_initial = control_initial,
++                    control_algorithm = list(tuning = 0.5),
++                    power_fixed = c(TRUE, TRUE), data = anthro)
+Error in .Call("_mglm4twin_ef_sensitivity_op", PACKAGE = "mglm4twin",  : 
+  Incorrect number of arguments (2), expecting 1 for '_mglm4twin_ef_sensitivity_op'
+Error in model_fit$IterationCovariance : 
+  $ operator is invalid for atomic vectors
+Calls: mglm4twin -> na.exclude
+Execution halted
+* checking PDF version of manual ... OK
+* checking HTML version of manual ... NOTE
+Skipping checking HTML validation: no command 'tidy' found
+Skipping checking math rendering: package 'V8' unavailable
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 1 WARNING, 6 NOTEs

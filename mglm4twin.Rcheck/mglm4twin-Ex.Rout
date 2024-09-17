@@ -1,0 +1,79 @@
+
+R version 4.4.1 (2024-06-14) -- "Race for Your Life"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "mglm4twin"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> base::assign(".ExTimings", "mglm4twin-Ex.timings", pos = 'CheckExEnv')
+> base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+> base::assign(".format_ptime",
++ function(x) {
++   if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
++   if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
++   options(OutDec = '.')
++   format(x[1L:3L], digits = 7L)
++ },
++ pos = 'CheckExEnv')
+> 
+> ### * </HEADER>
+> library('mglm4twin')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("anthro")
+> ### * anthro
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: anthro
+> ### Title: Anthropometric measures (weight and height)
+> ### Aliases: anthro
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> require(mglm4twin)
+> data(anthro, package="mglm4twin")
+> anthro$age <- (anthro$age - mean(anthro$age))/sd(anthro$age)
+> anthro$weight <- (anthro$weight - mean(anthro$weight))/sd(anthro$weight)
+> anthro$height <- (anthro$height - mean(anthro$height))/sd(anthro$height)
+> form_Wt <- weight ~ age + Group*Twin_pair
+> form_Ht <- height ~ age + Group*Twin_pair
+> biv0 <- list("formE1" = ~ age, "formE2" = ~ age, "formE12" = ~ age,
++              "formA1" = ~ age, "formA2" = ~ age, "formA12" = ~ age,
++              "formC1" = ~ age, "formC2" = ~ age, "formC12" = ~ age)
+> Z_biv0 <- mt_twin(N_DZ = 327, N_MZ = 534, n_resp = 2, model = "ACE",
++                  formula = biv0, data = anthro)
+> control_initial <- list()
+> control_initial$regression <- list("R1" = c(0.13, 0.10, -0.20, -0.02, 0.037),
++                                    "R2" = c(0.23, 0.01, -0.27, -0.11, 0.11))
+> control_initial$power <- list(c(0), c(0))
+> control_initial$tau <- c(0.15, 0, 0.12, rep(0,15))
+> fit_0 <- mglm4twin(linear_pred = c(form_Wt, form_Ht), matrix_pred = Z_biv0,
++                    control_initial = control_initial,
++                    control_algorithm = list(tuning = 0.5),
++                    power_fixed = c(TRUE, TRUE), data = anthro)
+Error in .Call("_mglm4twin_ef_sensitivity_op", PACKAGE = "mglm4twin",  : 
+  Incorrect number of arguments (2), expecting 1 for '_mglm4twin_ef_sensitivity_op'
+Error in model_fit$IterationCovariance : 
+  $ operator is invalid for atomic vectors
+Calls: mglm4twin -> na.exclude
+Execution halted

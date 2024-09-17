@@ -1,0 +1,26 @@
+anthro                  Anthropometric measures (weight and height)
+bmi                     Body mass index
+bpdrds                  Bronchopulmonary dysplasia and respiratory
+                        distress syndrome on preterm infants
+coef.mglm4twin          Model Coefficients
+fit_mglm                Chaser and Reciprocal Likelihood algorithms
+gof                     Measures of Goodness-of-Fit
+mglm4twin               Fitting Multivariate Covariance Generalized
+                        Linear Models to Twin data
+mt_derivative_V_sqrt_beta
+                        Derivatives of V^1/2 with respect to beta.
+mt_emp_variability      Empirical variability matrix
+mt_initial_values       Automatic Initial Values
+mt_link_function        Link Functions
+mt_matrix_linear_predictor
+                        Matrix Linear Predictor
+mt_variance_function    Variance Functions
+pAIC                    Pseudo Akaike Information Criterion
+pBIC                    Pseudo Bayesian Information Criterion
+pKLIC                   Pseudo Kullback-Leibler Information Criterion
+plogLik                 Gaussian Pseudo-loglikelihood
+print.mglm4twin         Print
+psydis                  Psychiatric disorders
+summary.mglm4twin       Summarizing
+t0psqi                  Sleep’s quality
+vcov.mglm4twin          Variance-Covariance Matrix

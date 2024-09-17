@@ -35,13 +35,13 @@ check_man()
 # Check functions, datasets, run examples, etc. With check_dir = "../",
 # it will create a directory named mcglm.Rcheck (right beside this root
 # directory) with all the logs, manuals, figures from examples, etc.
-check(manual = TRUE, vignettes = FALSE, check_dir = "../",
+check(manual = TRUE, vignettes = TRUE, check_dir = "../",
       cran = TRUE)
 
 #-----------------------------------------------------------------------
 # Build the package (it will be one directory up).
 
-build(manual = TRUE, vignettes = FALSE)
+build(manual = TRUE, vignettes = TRUE)
 # build the binary version for windows (not used)
 # devtools::build_win()
 

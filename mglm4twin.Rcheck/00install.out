@@ -1,0 +1,22 @@
+* installing *source* package ‘mglm4twin’ ...
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0’
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/wagner/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/home/wagner/R/x86_64-pc-linux-gnu-library/4.4/RcppArmadillo/include'     -fpic  -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-time -D_FORTIFY_SOURCE=3   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/wagner/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/home/wagner/R/x86_64-pc-linux-gnu-library/4.4/RcppArmadillo/include'     -fpic  -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-time -D_FORTIFY_SOURCE=3   -c ef_sensitivity_op.cpp -o ef_sensitivity_op.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/wagner/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/home/wagner/R/x86_64-pc-linux-gnu-library/4.4/RcppArmadillo/include'     -fpic  -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-time -D_FORTIFY_SOURCE=3   -c ef_variability_op.cpp -o ef_variability_op.o
+g++ -std=gnu++17 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro -o mglm4twin.so RcppExports.o ef_sensitivity_op.o ef_variability_op.o -L/usr/lib/R/lib -lR
+installing to /home/wagner/GitHub/mglm4twin/mglm4twin.Rcheck/00LOCK-mglm4twin/00new/mglm4twin/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (mglm4twin)

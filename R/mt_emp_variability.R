@@ -41,11 +41,11 @@ mt_emp_variability <- function(object, id) {
                                       function(x, idx) x[idx,idx],
                                       idx = idx)
     qscore <- ef_quasi_score(D = D[idx,], Cfeatures_group$inv_Sigma,
-                             temp_group[[i]]$Y, mu_vec = temp_group[[i]]$mu)$Score
+                             temp_group[[i]]$Y, mu_vec = temp_group[[i]]$mu, W = object$W[idx,idx])$Score
 
     score_pearson <- ef_pearson(y_vec = temp_group[[i]]$Y,
                           mu_vec = temp_group[[i]]$mu,
-                          Cfeatures = Cfeatures_group)$Score
+                          Cfeatures = Cfeatures_group, W = object$W[idx, idx])$Score
     mat[i,] <- c(as.numeric(qscore), score_pearson)
   }
   return(cov(mat)*nrow)

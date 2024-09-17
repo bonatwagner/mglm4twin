@@ -4,10 +4,12 @@
 \alias{ef_sensitivity}
 \title{Sensitivity matrix}
 \usage{
-ef_sensitivity(product)
+ef_sensitivity(product, W = W)
 }
 \arguments{
 \item{product}{A list of matrix.}
+
+\item{W}{weights.}
 }
 \value{
 The sensitivity matrix associated with the Pearson estimating
