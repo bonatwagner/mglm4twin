@@ -29,20 +29,21 @@ ef_variability <- function(sensitivity, product, inv_C, C, res, W) {
   #                            sum(k4 * diag(W[[i]]) * diag(W[[j]])))
   #    }
   #}
-  #Sensitivity2 <- ef_sensitivity_op(products = product, W = W^2)
-  Sensitivity2 <- ef_sensitivity(product = product)
-  Sensitivity2 <- forceSymmetric(Sensitivity2)
+  #Sensitivity2 <- ef_sensitivity(product = product)
+  Sensitivity2 <- ef_sensitivity_op(products = product, W = W^2)
+  Sensitivity2 <- forceSymmetric(Sensitivity2, uplo = "L")
   #sourceCpp("src/mc_variability_op.cpp")
   W <- as.vector(diag(W))
   #Variability = ef_variability_op(sensitivity = Sensitivity2, W = W, k4 = k4)
-  Variability <- matrix(0, ncol = n_par, nrow = n_par)
-  for (i in 1:n_par) {
-     for (j in 1:i) {
-         Variability[i, j] <-
-             as.numeric(-2 * sensitivity[i, j] +
-                             sum(k4 * diag(WE[[i]]) * diag(WE[[j]])))
-     }
-  }
+  Variability = ef_variability_op(sensitivity = Sensitivity2, WE = WE, k4 = k4, W = W)
+  # Variability <- matrix(0, ncol = n_par, nrow = n_par)
+  # for (i in 1:n_par) {
+  #    for (j in 1:i) {
+  #        Variability[i, j] <-
+  #            as.numeric(-2 * sensitivity[i, j] +
+  #                            sum(k4 * diag(WE[[i]]) * diag(WE[[j]])))
+  #    }
+  # }
   #print(Variability)
   Variability <- forceSymmetric(Variability, uplo = "L")
   #print(Variability)

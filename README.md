@@ -1,9 +1,11 @@
 
 
-# mglm4twin 0.4.0
+# mglm4twin 0.5.0
 
 The `mglm4twin` package fits multivariate generalized linear models 
-for twin and family data. (Bonat and Hjelmborg, 2018).
+for twin and family data. (Bonat and Hjelmborg, 2020). Check the paper
+[here](https://link.springer.com/article/10.1007/s10519-021-10095-3).
+
 
 ## Introduction
 
@@ -29,20 +31,20 @@ library(devtools)
 install_github("bonatwagner/mglm4twin")
 ```
 
-Alternatively, download the package tarball: [mglm4twin_0.4.0.tar.gz][]
+Alternatively, download the package tarball: [mglm4twin_0.5.0.tar.gz][]
 and run from a UNIX terminal (make sure you are on the container file
 directory):
 
 
 ```
-R CMD INSTALL -l /path/to/your/R/library mglm4twin_0.4.0.tar.gz
+R CMD INSTALL -l /path/to/your/R/library mglm4twin_0.5.0.tar.gz
 ```
 
 Or, inside an `R` session:
 
 
 ```
-install.packages("mglm4twin_0.4.0.tar.gz", repos = NULL,
+install.packages("mglm4twin_0.5.0.tar.gz", repos = NULL,
                  lib.loc = "/path/to/your/R/library",
                  dependencies = TRUE)
 ```
@@ -54,13 +56,13 @@ library.
 
 ### Windows
 
-Download Windows binary version: [mglm4twin_0.4.0.zip][] (**do not unzip
+Download Windows binary version: [mglm4twin_0.5.0.zip][] (**do not unzip
 it under Windows**), put the file in your working directory, and from
 inside `R`:
 
 
 ```
-install.packages("mglm4twin_0.4.0.zip", repos = NULL,
+install.packages("mglm4twin_0.5.0.zip", repos = NULL,
                  dependencies = TRUE)
 ```
 
@@ -90,8 +92,8 @@ See [LICENSE](./LICENSE)
 [GNU General Public License (GPL) v3.0]: http://www.gnu.org/licenses/gpl-3.0.html
 [`roxygen2`]: https://github.com/klutometis/roxygen
 [`devtools`]: https://github.com/hadley/devtools
-[mglm4twin_0.4.0.tar.gz]: http://www.leg.ufpr.br/~wagner/mglm4twin/source/mglm4twin_0.4.0.tar.gz
-[mglm4twin_0.4.0.zip]: http://www.leg.ufpr.br/~wagner/mglm4twin/source/mglm4twin_0.4.0.zip
+[mglm4twin_0.5.0.tar.gz]: http://www.leg.ufpr.br/~wagner/mglm4twin/source/mglm4twin_0.5.0.tar.gz
+[mglm4twin_0.5.0.zip]: http://www.leg.ufpr.br/~wagner/mglm4twin/source/mglm4twin_0.5.0.zip
 [mglm4twin-manual.pdf]: http://www.leg.ufpr.br/~wagner/mglm4twin/source/mglm4twin-manual.pdf
 [Gitflow workflow]: http://nvie.com/posts/a-successful-git-branching-model/
 [Wagner Hugo Bonat]: http://www.leg.ufpr.br/~wagner

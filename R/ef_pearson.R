@@ -23,8 +23,8 @@
 
 ef_pearson <- function(y_vec, mu_vec, Cfeatures, inv_J_beta = NULL,
                        D = NULL, correct = FALSE,
-                       compute_variability = FALSE,
                        compute_sensitivity = TRUE,
+                       compute_variability = FALSE,
                        W) {
   product <- lapply(Cfeatures$D_Sigma, ef_multiply,
                     bord2 = Cfeatures$inv_Sigma)

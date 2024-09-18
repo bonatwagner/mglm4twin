@@ -1,8 +1,8 @@
 Package: mglm4twin
 Type: Package
 Title: Multivariate Generalized linear models for twin data
-Version: 0.4.0
-Date: 2024-09-11
+Version: 0.5.0
+Date: 2024-09-18
 Author: Wagner Hugo Bonat [aut, cre],
   Jacob v. B. Hjelmborg [ctb]
 Maintainer: Wagner Hugo Bonat <wbonat@ufpr.br>

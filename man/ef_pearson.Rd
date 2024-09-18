@@ -11,8 +11,8 @@ ef_pearson(
   inv_J_beta = NULL,
   D = NULL,
   correct = FALSE,
-  compute_variability = FALSE,
   compute_sensitivity = TRUE,
+  compute_variability = FALSE,
   W
 )
 }
@@ -29,9 +29,9 @@ ef_pearson(
 
 \item{correct}{Logical.}
 
-\item{compute_variability}{Logical.}
-
 \item{compute_sensitivity}{Logical.}
+
+\item{compute_variability}{Logical.}
 
 \item{W}{Matrix of weights.}
 }
